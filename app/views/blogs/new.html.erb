@@ -1,8 +1,12 @@
-<h1>New blog</h1>
+<h1>記事作成</h1>
 <%= form_with model: @blog, local:true do |f| %>
-  <h4>Title</h4>
-  <%= f.text_field :title %>
-  <h4>Opinion</h4>
-  <%= f.text_area :body %>
-  <%= f.submit '投稿' %>
+  <div class="mb-3">
+    <label class="form-label">タイトル</label>
+    <%= f.text_field :title, class: "form-control" %>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">内容</label>
+    <%= f.text_area :body, class: "form-control"%>
+  </div>
+  <%= f.submit '投稿', class: "btn btn-primary"%>
 <% end %>

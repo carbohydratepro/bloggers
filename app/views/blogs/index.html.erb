@@ -1,9 +1,11 @@
+<h1>記事一覧</h1>
 <% @blogs.each do |blog| %>
-  <tr>
-    <td><%= blog.user_id %></td>
-    <td><%= blog.title %></td>
-    <td><%= blog.body %></td>
-  </tr>
+  <div class="card m-3" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title"><%= blog.title %></h5>
+      <h6 class="card-subtitle mb-2 text-muted"><%= blog.user_id %></h6>
+      <p class="card-text"><%= blog.body %></p>
+      <a href="#" class="btn btn-primary">記事を見る</a>
+    </div>
+  </div>
 <% end %>
-
-<%= link_to "new", new_blog_url, {class: "btn btn-primary mx-1"} %>
