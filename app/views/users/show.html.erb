@@ -1,0 +1,14 @@
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <h1>users</h1>
+        <body>
+          <div><%= @user.name %></div>
+          <div><%= @user.email %></div>
+        </body>
+        <%= link_to ' ホーム', user_path(current_user.id), class: ' nav-link text-white' %>
+      </div>
+    </div>
+  </div>
+</main>

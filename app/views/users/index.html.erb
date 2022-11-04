@@ -1,0 +1,24 @@
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-1">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>name</th>
+              <th>email</th>
+          </thead>
+          <tbody>
+            <% @users.each do |user| %>
+              <tr>
+                <td><%= user.name %></td>
+                <td><%= user.email %></td>
+                <td><%= link_to 'Show', user_path(user.id) %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</main>
