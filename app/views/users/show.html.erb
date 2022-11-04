@@ -4,12 +4,8 @@
       <div class="col-md-3">
         <h1>users</h1>
         <body>
-          <% @users.each do |user| %>
-            <tr>
-              <td><%= user.name %></td>
-              <td><%= lint_to 'Show', user_path(user.id) %></td>
-            </tr>
-          <% end %>
+          <div><%= @user.name %></div>
+          <div><%= @user.email %></div>
         </body>
       </div>
     </div>
