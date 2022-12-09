@@ -15,6 +15,10 @@ class BlogsController < ApplicationController
     redirect_to '/blogs'
   end
 
+  def show
+    @blog = Blog.find(params[:id])
+  end
+
   private
     def post_params #ストロングパラメータ
       params.require(:blog).permit(:title, :body)

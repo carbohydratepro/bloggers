@@ -1,11 +1,12 @@
 <h1>記事一覧</h1>
+<%= link_to ' 投稿', new_blog_path %>
 <% @blogs.each do |blog| %>
   <div class="card m-3" style="width: 18rem;">
     <div class="card-body">
       <h5 class="card-title"><%= blog.title %></h5>
       <h6 class="card-subtitle mb-2 text-muted"><%= blog.user_id %></h6>
       <p class="card-text"><%= blog.body %></p>
-      <a href="#" class="btn btn-primary">記事を見る</a>
+      <%= link_to ' 詳細', blog_path(blog.id) %>
     </div>
   </div>
 <% end %>
