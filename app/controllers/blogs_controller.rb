@@ -1,7 +1,7 @@
 class BlogsController < ApplicationController
 
   def index
-    @blogs = Blog.all.page(params[:page])
+    @blogs = Blog.page(params[:page]).per(5)
   end
 
   def new
@@ -13,6 +13,10 @@ class BlogsController < ApplicationController
     @blog.user_id = current_user.id
     @blog.save
     redirect_to '/blogs'
+  end
+
+  def show
+    @blog = Blog.find(params[:id])
   end
 
   private

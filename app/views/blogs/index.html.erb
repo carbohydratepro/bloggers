@@ -1,5 +1,6 @@
 <div class="container">
   <h2>記事一覧</h2>
+  <%= link_to ' 投稿', new_blog_path %>
   <ul>
   <% @blogs.each do |blog| %>
     <div class="card w-75 mb-3">
@@ -7,7 +8,7 @@
         <h3 class="card-title"><%= blog.title %></h3>
         <h6 class="card-subtitle mb-2 text-muted fas fa-user"><%= blog.user_id %></h6>
         <p class="card-text"><%= blog.body %></p>
-        <a href="#" class="btn btn-primary">記事を見る</a>
+        <%= link_to ' 詳細', blog_path(blog.id) %>
       </div>
     </div>
   <% end %>
