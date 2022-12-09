@@ -1,11 +1,17 @@
-<h1>記事一覧</h1>
-<% @blogs.each do |blog| %>
-  <div class="card m-3" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title"><%= blog.title %></h5>
-      <h6 class="card-subtitle mb-2 text-muted"><%= blog.user_id %></h6>
-      <p class="card-text"><%= blog.body %></p>
-      <a href="#" class="btn btn-primary">記事を見る</a>
+<div class="container">
+  <h2>記事一覧</h2>
+  <ul>
+  <% @blogs.each do |blog| %>
+    <div class="card w-75 mb-3">
+      <div class="card-body">
+        <h3 class="card-title"><%= blog.title %></h3>
+        <h6 class="card-subtitle mb-2 text-muted fas fa-user"><%= blog.user_id %></h6>
+        <p class="card-text"><%= blog.body %></p>
+        <a href="#" class="btn btn-primary">記事を見る</a>
+      </div>
     </div>
-  </div>
-<% end %>
+  <% end %>
+  </ul>
+
+  <%= paginate @blogs %>
+</div>
