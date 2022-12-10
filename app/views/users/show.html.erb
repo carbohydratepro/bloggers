@@ -4,8 +4,10 @@
       <div class="col-md-3">
         <h1>users</h1>
         <body>
+          <h5>name</h5>
           <div><%= @user.name %></div>
-          <div><%= @user.email %></div>
+          <h5>introduction</h5>
+          <div><%= @user.introduction %></div>
         </body>
         <%= link_to ' ホーム', user_path(current_user.id), class: ' nav-link text-white' %>
       </div>
