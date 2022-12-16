@@ -1,6 +1,6 @@
 <div class="container">
   <h2>記事一覧</h2>
-  <%= link_to ' 投稿', new_blog_path %>
+  <%= link_to ' 投稿', new_blog_path, class: "btn btn-primary" %>
   <ul>
   <% @blogs.each do |blog| %>
     <div class="card w-75 mb-3">
