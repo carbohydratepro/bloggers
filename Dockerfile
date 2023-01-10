@@ -1,6 +1,7 @@
 FROM ruby:3.1.2
 
 RUN apt update -qq && apt install -y postgresql-client
+RUN apt-get update && apt-get -y install imagemagick libmagick++-dev
 RUN mkdir /myapp
 WORKDIR /myapp
 COPY Gemfile /myapp/Gemfile
